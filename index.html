@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登戸・向ヶ丘遊園グルメ日記</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-9xi7m5tEwS67P/4+2+S36n+lfF0QYfE6y5HCKi+M14uHzZs4glN27PDw8u8c+7Z9QcdA0U9Gak6H56IGuVfXKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --accent: #3ba8e7af;
+      --bg: #f9f9f9;
+      --text: #333;
+      --card-bg: #edf1fa;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --thumb-height: 180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    article.card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    article.card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      background: #fafafa;
+      place-items: center;
+      padding: 4px;
+    }
+
+    .card-images figure {
+      margin: 0;
+    }
+
+    .card-images img {
+      max-height: var(--thumb-height);
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .card-images figcaption {
+      font-size: 0.75rem;
+      color: #555;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    .card-images:has(figure:nth-child(1):nth-last-child(1)) {
+      grid-template-columns: 1fr;
+    }
+
+    body.instagram .card-images img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      max-height: none;
+    }
+
+    .card-content {
+      padding: 1rem 1.2rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.6rem;
+    }
+
+    .stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 0.8rem;
+    }
+
+    .stars i {
+      font-size: 1rem;
+    }
+
+    .stars .fa-solid {
+      background: linear-gradient(120deg, #ff6b81 0%, #ffbc00 33%, #6bffb6 66%, #6ba8ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stars .fa-regular {
+      color: #ccc;
+    }
+
+    .card p {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .map-link:hover {
+      opacity: 0.8;
+    }
+
+    .read-more {
+      align-self: flex-start;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: var(--radius);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .read-more:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body class="instagram">
+  <header>
+    <h1>登戸・向ヶ丘遊園グルメ日記</h1>
+    <p>実はすでに20店以上制覇しています。全部掲載目指します！</p>
+  </header>
+  <main>
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/250521193658241.jpg" alt="ステーキ">
+          <figcaption>脂肪少ないの好き</figcaption>
+        </figure>
+        <figure>
+          <img src="images/250208181327915.jpg" alt="デザート">
+          <figcaption>アフォガード旨い</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>Ocean good Table 向ヶ丘遊園</h2>
+        <div class="meta">訪問日: 直近は2025年6月</div>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p>お肉！選べるコースがお手頃。飲み放題もあります。ボリューミーなのに小食の人でも全て美味しく完食できます。きれいで落ち着いた雰囲気。
+      </p>
+      </p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ocean+good+Table+向ヶ丘遊園" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/Ocean good Table.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/250620171810453.jpg" alt="店内">
+          <figcaption>ワインバーあり</figcaption>
+        </figure>
+        <figure>
+          <img src="images/250620171847344.jpg" alt="パテ？">
+          <figcaption>パテ</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>Oldmansilence</h2>
+        <div class="meta">訪問日: 直近は2025年6月</div>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p>ワインと食材にこだわった静かなお店。パスタ自家製、お肉も適量選べます。野菜が新鮮すぎる！
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.com/maps/place/Oldman+silence/@35.6182674,139.5631484,17z/data=!4m6!3m5!1s0x6018f10003569ce3:0xcd0b90ae69eb2e95!8m2!3d35.6178085!4d139.5639064!16s%2Fg%2F11w_vz5zpc?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/Oldmansilence.html">続きを読む</a>
+      </div>
+    </article>
+
+  </main>
+  <footer>
+    &copy; 2025 set. ★とコメントは独断と偏見です。
+  </footer>
+</body>
+</html>
