@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登戸・向ヶ丘遊園グルメ日記</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #3ba8e7af;
+      --bg: #f9f9f9;
+      --text: #333;
+      --card-bg: #edf1fa;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --thumb-height: 180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--accent);
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    article.card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    article.card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      background: #fafafa;
+      place-items: center;
+      padding: 4px;
+    }
+
+    .card-images figure {
+      margin: 0;
+    }
+
+    .card-images img {
+      max-height: var(--thumb-height);
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .card-images figcaption {
+      font-size: 0.75rem;
+      color: #555;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    .card-images:has(figure:nth-child(1):nth-last-child(1)) {
+      grid-template-columns: 1fr;
+    }
+
+    body.instagram .card-images img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      max-height: none;
+    }
+
+    .card-content {
+      padding: 1rem 1.2rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.6rem;
+    }
+
+    .stars {
+      font-size: 1.1rem;
+      color: #ffc107;
+      margin-bottom: 0.8rem;
+      letter-spacing: 1px;
+    }
+    .card p {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .map-link:hover {
+      opacity: 0.8;
+    }
+
+    .read-more {
+      align-self: flex-start;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: var(--radius);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .read-more:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0 3rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body class="instagram">
+  <header>
+    <h1>登戸・向ヶ丘遊園<br>グルメ日記</h1>
+    <p>実はすでに20店以上制覇しています。<br>全部掲載目指します！</p>
+  </header>
+  <main>
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/250521193658241.JPG" alt="ステーキ">
+          <figcaption>脂肪少ないの好き</figcaption>
+        </figure>
+        <figure>
+          <img src="images/250208181327915.JPG" alt="デザート">
+          <figcaption>アフォガート旨い</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>Ocean good Table 向ヶ丘遊園</h2>
+        <div class="meta">訪問日: 直近は2025年6月</div>
+        <div class="stars">★★★★★</div>
+        <p>お肉！選べるコースがお手頃。飲み放題もあります。ボリューミーなのに小食の人でも全て美味しく完食できます。きれいで落ち着いた雰囲気。
+      </p>
+      </p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ocean+good+Table+向ヶ丘遊園" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/Ocean good Table.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/250620171810453.JPG" alt="店内">
+          <figcaption>ワインバー？</figcaption>
+        </figure>
+        <figure>
+          <img src="images/250620171847344.JPG" alt="パテ？">
+          <figcaption>パテ</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>Oldmansilence</h2>
+        <div class="meta">訪問日: 直近は2025年6月</div>
+        <div class="stars">★★★★★</div>
+        <p>ワインと食材にこだわった静かなお店。パスタ自家製、お肉も適量選べます。野菜が新鮮すぎる！
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.com/maps/place/Oldman+silence/@35.6182674,139.5631484,17z/data=!4m6!3m5!1s0x6018f10003569ce3:0xcd0b90ae69eb2e95!8m2!3d35.6178085!4d139.5639064!16s%2Fg%2F11w_vz5zpc?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/Oldmansilence.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/1751454364058.jpg" alt="オムレツ">
+          <figcaption>オムレツ！</figcaption>
+        </figure>
+        <figure>
+          <img src="images/1751454364062.jpg" alt="前菜">
+          <figcaption>ボリューミーな前菜</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>aux hills <br>オグジュアリー ヒルズ</h2>
+        <div class="meta">訪問日: 直近は2025年5月</div>
+        <div class="stars">★★★★★</div>
+        <p>ソファー席でくつろげます。曜日も関係あるのかもしれませんが、基本静かなお店。
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.co.jp/maps/place/aux+hills/@35.6181563,139.5611251,17z/data=!3m1!4b1!4m6!3m5!1s0x6018f10c589752af:0xfd71e74b3393de70!8m2!3d35.6181563!4d139.5637!16s%2Fg%2F11v3q3tzk7?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/aux hills.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/241228173844393~2.JPG" alt="れんこん">
+          <figcaption>れんこん！</figcaption>
+        </figure>
+        <figure>
+          <img src="images/250221202831272.JPG" alt="デザート">
+          <figcaption>チーズケーキでした</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>酒縁 竹に雀</h2>
+        <div class="meta">訪問日: 結構前です</div>
+        <div class="stars">★★★★★</div>
+        <p>こじんまりとしたカウンター席がメインのお店。ですが広くて居心地が良いです。
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.co.jp/maps/place/%E9%85%92%E7%B8%81+%E7%AB%B9%E3%81%AB%E9%9B%80/@35.6181563,139.5611251,17z/data=!3m1!4b1!4m6!3m5!1s0x6018f12d7efb77b3:0x21e6eb7ac2421389!8m2!3d35.6181563!4d139.5637!16s%2Fg%2F11v14lhlfg?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/takenisuzume.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/1751706812092.JPG" alt="肉">
+          <figcaption>肉にはポテトなのね</figcaption>
+        </figure>
+        <figure>
+          <img src="images/1751706867063.JPG" alt="パスタ">
+          <figcaption>チーズチーズパスタ！</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>ポルタ・モンターレ</h2>
+        <div class="meta">訪問日: よくいきます</div>
+        <div class="stars">★★★★★</div>
+        <p>いつも賑やかなお店です。店員さんもイキイキとされています。チーズとワイン好きには何度行っても飽きない！？
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.co.jp/maps/place/%E9%99%BD%E6%B0%97%E3%81%AA%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3+%E3%83%9D%E3%83%AB%E3%82%BF%E3%83%A2%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%AC/@35.6202896,139.5678185,17z/data=!3m1!4b1!4m6!3m5!1s0x6018f1273b85c461:0x134593d6a4eec779!8m2!3d35.6202896!4d139.5703934!16s%2Fg%2F1tfk912j?entry=ttu&g_ep=EgoyMDI1MDcwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/Porta Montare.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/240921172348845~3.JPG" alt="ビール">
+          <figcaption>写真がこれしか・・・</figcaption>
+        </figure>
+        <figure>
+          <img src="images/240922174655538~3.JPG" alt="夕日">
+          <figcaption>写真なくて・・夕やけ</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>キリンシティ 登戸店</h2>
+        <div class="meta">訪問日: 平日いきます</div>
+        <div class="stars">★★★★★</div>
+        <p>いつ行っても大丈夫！？落ち着いたお店です。ふらっと立ち寄りたい、そんな時におすすめです。
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.co.jp/maps/place/%E3%82%AD%E3%83%AA%E3%83%B3%E3%82%B7%E3%83%86%E3%82%A3%E7%99%BB%E6%88%B8/@35.6198572,139.5677832,17z/data=!3m2!4b1!5s0x6018f127160f7a39:0xf96d38c0b175aa50!4m6!3m5!1s0x6018f1273edb3d97:0xfcd68282e0617e5c!8m2!3d35.6198572!4d139.5703581!16s%2Fg%2F1tz71ffk?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/kirincity.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        <figure>
+          <img src="images/1752373081179~2.JPG" alt="さしみ">
+          <figcaption>刺身分厚い！</figcaption>
+        </figure>
+        <figure>
+          <img src="images/1752373081170~2.JPG" alt="どんぶり">
+          <figcaption>コースの〆どんぶり</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>魚三昧 ことぶきや 登戸店</h2>
+        <div class="meta">訪問日: よくいってました</div>
+        <div class="stars">★★★★</div>
+        <p>平日のハッピーアワーが幸せな気分になります。ビール一気飲み！
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.co.jp/maps/place/%E9%AD%9A%E4%B8%89%E6%98%A7%E3%81%93%E3%81%A8%E3%81%B6%E3%81%8D%E3%82%84%E7%99%BB%E6%88%B8%E5%BA%97/@35.6195474,139.5655047,17z/data=!3m2!4b1!5s0x6018f0d8bb14e11b:0xa2ddcac4b292241a!4m6!3m5!1s0x6018f1791bbd0e77:0x817b22d768d90803!8m2!3d35.6195474!4d139.5680796!16s%2Fg%2F11trnvz0k6?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/kotobukiya.html">続きを読む</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-images">
+        
+        <figure>
+          <img src="images/240922174655538~3.JPG" alt="夕日">
+          <figcaption>写真なくて・・夕やけ2</figcaption>
+        </figure>
+      </div>
+      <div class="card-content">
+        <h2>向ヶ丘遊園 オスシマチ</h2>
+        <div class="meta">訪問日: 開店した頃</div>
+        <div class="stars">★★★★</div>
+        <p>独創的なお寿司のオンパレード。日本酒ですね。店員さんもカラフルで・・
+      </p>
+      </p>
+       <a class="map-link" href="https://www.google.co.jp/maps/place/%E3%82%AA%E3%82%B9%E3%82%B7%E3%83%9E%E3%83%81+%E5%90%91%E3%83%B6%E4%B8%98%E9%81%8A%E5%9C%92/@35.6176921,139.5616419,17z/data=!3m1!4b1!4m6!3m5!1s0x6018f1bdb5bf918b:0xf82d0c5ab91e0c3a!8m2!3d35.6176921!4d139.5642168!16s%2Fg%2F11vkqlmttd?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">地図で見る</a>
+        <a class="read-more" href="post/osushimachi.html">続きを読む</a>
+      </div>
+    </article>
+
+  </main>
+  <footer>
+    &copy; 2025 set. ★とコメントは独断と偏見です。
+  </footer>
+</body>
+</html>
